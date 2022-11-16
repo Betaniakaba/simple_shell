@@ -83,6 +83,7 @@ char *read_dir(char *er, struct dirent *s, char *fil, int l, char *fp, char *t)
 char *save_path(char *tmp, char *path)
 {
 	int i = 0;
+
 	if (!tmp)
 	{
 		tmp = malloc(sizeof(char) * 100);
