@@ -18,8 +18,7 @@ void shell(int argc, char **argv, char **env)
 	int flow;
 
 	er = "Error";
-	do
-	{
+	do	{
 		prompt();
 		line = _getline();
 		args = split_line(line);
@@ -39,8 +38,7 @@ void shell(int argc, char **argv, char **env)
 		status = execute_prog(args, line, env, flow);
 		free(line);
 		free(args);
-	}
-	while (status);
+	} while (status);
 	if (!argc)
 		(void)argc;
 	if (!argv)
